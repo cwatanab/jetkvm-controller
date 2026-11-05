@@ -53,6 +53,11 @@ When an AI agent automates an OS install (e.g. Windows OOBE, Ubuntu installer), 
 ```bash
 git clone https://github.com/cwatanab/jetkvm-controller.git
 cd jetkvm-controller
+
+# Option A: Install as CLI tool (`jetkvm` command)
+pip install -e .
+
+# Option B: Run directly with requirements
 pip install -r requirements.txt
 ```
 
@@ -76,7 +81,8 @@ You can also pass `--host` and `--password` directly to any command.
 
 ## 📖 CLI Usage & Command Reference
 
-The primary entry point is `scripts/jetkvm_client.py`.
+You can use the installed `jetkvm` command directly, or run `python scripts/jetkvm_client.py`.
+*(Commands below use `jetkvm` for brevity)*
 
 ### 1. Smart Waiting (`wait-change`)
 
@@ -221,10 +227,11 @@ sequenceDiagram
 ```
 jetkvm-controller/
 ├── SKILL.md                 # Antigravity / AI Agent skill specification
+├── pyproject.toml           # Packaging & CLI entry point (`jetkvm`)
+├── requirements.txt         # Optional dependencies (Pillow)
 ├── scripts/
 │   └── jetkvm_client.py     # Main CLI script with frame-diff algorithm
 ├── .gitignore
-├── requirements.txt         # Optional dependencies (Pillow)
 ├── LICENSE                  # MIT License
 ├── README.md                # English documentation
 └── README.ja.md             # Japanese documentation

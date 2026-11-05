@@ -54,6 +54,11 @@ AIエージェントにWindows OOBEやLinuxインストーラーの操作を任�
 ```bash
 git clone https://github.com/cwatanab/jetkvm-controller.git
 cd jetkvm-controller
+
+# 選択肢 A: CLIコマンド (`jetkvm`) としてインストール
+pip install -e .
+
+# 選択肢 B: 依存ライブラリのみ導入して直接スクリプト実行
 pip install -r requirements.txt
 ```
 
@@ -77,7 +82,8 @@ export JETKVM_PASSWORD="your-secure-password"
 
 ## 📖 CLI コマンドリファレンス
 
-メインスクリプトは `scripts/jetkvm_client.py` です。
+インストールした `jetkvm` コマンドで直接実行できます（`python scripts/jetkvm_client.py` でも同様に実行可能）。
+*(以下の例では短く書ける `jetkvm` コマンドで記載しています)*
 
 ### 1. スマート待機 (`wait-change`)
 
@@ -222,10 +228,11 @@ sequenceDiagram
 ```
 jetkvm-controller/
 ├── SKILL.md                 # Antigravity / AI Agent スキル定義
+├── pyproject.toml           # パッケージ定義＆CLIコマンド (`jetkvm`)
+├── requirements.txt         # 依存パッケージ定義（Pillow）
 ├── scripts/
 │   └── jetkvm_client.py     # メインCLIスクリプト（差分検知アルゴリズム内蔵）
 ├── .gitignore
-├── requirements.txt         # 依存パッケージ定義（Pillow）
 ├── LICENSE                  # MIT ライセンス
 ├── README.md                # 英語ドキュメント
 └── README.ja.md             # 日本語ドキュメント

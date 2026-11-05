@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jetkvm-controller"
+version = "0.1.0"
+description = "Agentless remote control and smart frame-diff throttling for JetKVM"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+    { name = "Chihiro WATANABE", email = "chihiro.watanabe@live.jp" }
+]
+dependencies = [
+    "Pillow>=9.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/cwatanab/jetkvm-controller"
+Repository = "https://github.com/cwatanab/jetkvm-controller.git"
+
+[project.scripts]
+jetkvm = "jetkvm_client:main"
+
+[tool.setuptools]
+py-modules = ["jetkvm_client"]
+
+[tool.setuptools.package-dir]
+"" = "scripts"
