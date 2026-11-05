@@ -2,7 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python: 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![JetKVM](https://img.shields.io/badge/Hardware-JetKVM-orange.svg)](https://jetkvm.com/)
+[![Hardware: JetKVM](https://img.shields.io/badge/Hardware-JetKVM-orange.svg)](https://jetkvm.com/)
+[![AI Agent: Skill](https://img.shields.io/badge/AI%20Agent-Skill-purple.svg)](SKILL.md)
 
 [English](README.md) | [日本語](README.ja.md)
 
